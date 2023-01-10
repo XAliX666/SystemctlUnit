@@ -1,0 +1,11 @@
+[Unit]
+Descripton=Example of systemd unit
+
+#Oneshot bacause one command
+[Service]
+Type=oneshot
+ExecStart=apt-get update
+
+#многопользовательский режим
+[Install]
+WantedBy=multi-user.target
