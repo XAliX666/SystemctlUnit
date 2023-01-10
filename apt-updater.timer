@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs apt-get update every hour
+
+#Start service every 1 hours
+[Timer]
+OnUnitActiveSec=1h
+Unit=apt-updater.service
+
+[Install]
+WantedBy=multy-user.target
