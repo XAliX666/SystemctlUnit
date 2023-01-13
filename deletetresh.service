@@ -1,0 +1,9 @@
+[Unit]
+Description=Delete in Tresh
+
+[Service]
+Type=oneshot
+ExecStart= find /home/ali/TRESH -type f -mtime +1 -delete
+
+[Install]
+WantedBy=multi-user.target
